@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fyzikálna Kalkulačka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <span id="mSpan">
+        <label>m<sub>1</sub>:</label>
+        <input type="text" id="mInput" class="inputs">
+        <label>Jednotka:</label>
+        <select name="unit" id="mUnits" class="units">
+            <option value="kg">Kilogramy</option>
+            <option value="t">Tony</option>
+            <option value="g">Gramy</option>
+        </select><br><br><br>
+    
+        <label>m<sub>2</sub>:</label>
+        <input type="text" id="m2Input" class="inputs">
+        <label>Jednotka:</label>
+        <select name="unit" id="m2Units" class="units">
+            <option value="kg">Kilogramy</option>
+            <option value="t">Tony</option>
+            <option value="g">Gramy</option>
+        </select><br><br><br>
+    </span>
+
+    <span id="rSpan">
+        <label>r<sub>1</sub>:</label>
+        <input type="text" id="rInput" class="inputs">
+        <label>Jednotka:</label>
+        <select name="unit" id="rUnits" class="units">
+            <option value="m">Metre</option>
+            <option value="km">Kilometre</option>
+            <option value="dm">Decimetre</option>
+            <option value="cm">Centimetre</option>
+            <option value="mm">Milimetre</option>
+        </select><br><br><br>
+    
+        <label>r<sub>2</sub>:</label>
+        <input type="text" id="r2Input" class="inputs">
+        <label>Jednotka:</label>
+        <select name="unit" id="r2Units" class="units">
+            <option value="m">Metre</option>
+            <option value="km">Kilometre</option>
+            <option value="dm">Decimetre</option>
+            <option value="cm">Centimetre</option>
+            <option value="mm">Milimetre</option>
+        </select><br><br><br>
+    </span>
+
+    <span id="FgSpan">
+        <label>F<sub>g</sub></label>
+        <input type="text" id="FgInput" class="inputs">
+        <label>Jednotka:</label>
+        <select name="unit" id="FgUnits" class="units">
+            <option>N/Kg</option>
+        </select><br><br><br>
+    </span>
+
+    <span id="FSpan">
+        <label>F<sub>1</sub>:</label>
+        <input type="text" id="FInput" class="inputs">
+        <label>Jednotka:</label>
+        <select name="unit" id="FUnits" class="units">
+            <option value="N">Newtony</option>
+            <option value="gN">Giganewtony</option>
+            <option value="mN">Meganewtony</option>
+            <option value="kN">Kilonewtony</option>
+        </select><br><br><br>
+    
+        <label>F<sub>2</sub>:</label>
+        <input type="text" id="F2Input" class="inputs">
+        <label>Jednotka:</label>
+        <select name="unit" id="F2Units" class="units">
+            <option value="N">Newtony</option>
+            <option value="gN">Giganewtony</option>
+            <option value="mN">Meganewtony</option>
+            <option value="kN">Kilonewtony</option>
+        </select><br><br><br>
+    </span>
+
+    <span id="MSpan">
+        <label>M<sub>1</sub>:</label>
+        <input type="text" id="MInput" class="inputs">
+        <label>Jednotka:</label>
+        <select name="unit" id="MUnits" class="units">
+            <option>Newtonmetre</option>
+        </select><br><br>
+    
+        <label>M<sub>2</sub>:</label>
+        <input type="text" id="M2Input" class="inputs">
+        <label>Jednotka:</label>
+        <select name="unit" id="M2Units" class="units">
+            <option>Newtonmetre</option>
+        </select><br><br>
+    </span>
+
+    <button id="calcBtn">Výpočet</button><br><br>
+
+    <h4 id="note">Skontrolujte jednotky a pre neznámu napíšte '?'</h4><button id="hsBtn" style="cursor: pointer;">Skryť</button>
+    <hr>
+    <h3>Výpočet: </h3>
+    <h3 id="calc1Display"></h3><br>
+    <h3 id="calc2Display"></h3><br>
+
+    <script src="script.js"></script>
+
+    <script id="noteHideScript">
+        const button = document.getElementById("hsBtn");
+        const note = document.getElementById("note")
+        let hidden = false;
+
+        button.onclick = function(){
+            if(!hidden){
+                note.style.display = "none";
+                button.textContent = "Zobraziť";
+                hidden = true;
+            }
+            else if(hidden){
+                note.style.display = "block";
+                button.textContent = "Skryť";
+                hidden = false;
+            }
+        }
+
+    </script>
+
+</body>
+</html>
