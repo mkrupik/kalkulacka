@@ -1,0 +1,16 @@
+body{
+    min-height: 100vh;
+    background: linear-gradient(black, green, black);
+    background-attachment: fixed;
+    font-family: 'Inter', 'Outfit', 'Manrope', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
